@@ -7,11 +7,15 @@ import GestorCorreo.Filters.*;
 import java.util.ArrayList;
 
 
-public class FilterTest {
+public class FiltroTest {
      MailManager app = new MailManager();
-     User felix = app.crearUsuario("Felix", "Toledo", "felixtoledoctes");
-     User rodrigo = app.crearUsuario("rodri", "Gonzalez", "rodrigo@gmail.com");
-     User grace = app.crearUsuario("grace", "meza", "gracemeza10");
+     User felix = app.crearUsuario("Lautaro", "Salina", "lautaroasalina15");
+     User rodrigo = app.crearUsuario("Bruno", "Pini", "bruno@gmail.com");
+     User grace = app.crearUsuario("Lucas", "Salina", "lucassalina11");
+
+     //User felix = app.crearUsuario("Felix", "Toledo", "felixtoledoctes");
+     //User rodrigo = app.crearUsuario("rodri", "Gonzalez", "rodrigo@gmail.com");
+     //User grace = app.crearUsuario("grace", "meza", "gracemeza10");
      
 
      @Test

@@ -16,7 +16,7 @@ public class ContactoTest {
     public void contactoFuncionTest(){
         Contacto contacto = new Contacto("Lautaro", "Salina", "Lautaro@gmail.com");
         contacto.setNombre("Laucha");
-        contacto.setApellido("Mendonza");
+        contacto.setApellido("Mendoza");
         contacto.setDireccionCorreo("LauchaMendoza@gmail.com");
 
         String hasToBeName = "Laucha";
