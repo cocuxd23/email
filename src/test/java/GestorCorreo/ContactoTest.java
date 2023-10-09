@@ -3,13 +3,13 @@ package GestorCorreo;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class ContactTest {
+public class ContactoTest {
     @Test
     public void check_creation_of_contact(){
-        Contacto contacto = new Contacto("Felix", "Toledo", "felix@gmail.com");
-        assertEquals("Felix", contacto.getNombre());
-        assertEquals("Toledo", contacto.getApellido());
-        assertEquals("felix@gmail.com", contacto.getDireccionCorreo());
+        Contacto contacto = new Contacto("Lautaro", "Salina", "Lautaro10@gmail.com");
+        assertEquals("Lautaro", contacto.getNombre());
+        assertEquals("Salina", contacto.getApellido());
+        assertEquals("Lautaro10@gmail.com", contacto.getDireccionCorreo());
     }
 
     @Test

@@ -9,7 +9,7 @@ public class BandejaTest {
           Bandeja bandeja = new Bandeja();
           ArrayList<String> para = new ArrayList<>();
           Mail mail1 = new Mail("Hola", "Lautaro", "Mario", para);
-          Mail mail2 = new Mail("Hola2", "Felix2", "Como2", para);
+          Mail mail2 = new Mail("Hola2", "Mario", "Lautaro", para);
 
           bandeja.anadir(mail1);
           bandeja.anadir(mail2);
