@@ -12,11 +12,11 @@ public class UserTest {
 
         String nameOfSalina = lautarosalina.getNombre();
         String surnameOfSalina = lautarosalina.getApelldio();
-        String mailOfFelix = lautarosalina.getDireccionCorreo();
+        String mailOfSalina = lautarosalina.getDireccionCorreo();
 
         assertEquals("Felix", nameOfSalina);
         assertEquals("Toledo", surnameOfSalina);
-        assertEquals("felixtoledoctes@aquilita.com", mailOfFelix);
+        assertEquals("felixtoledoctes@aquilita.com", mailOfSalina);
     }
 
     @Test
