@@ -11,11 +11,11 @@ public class UserTest {
         User lautarosalina = new User("Lautaro", "Salina", "lautarosalina15");
 
         String nameOfSalina = lautarosalina.getNombre();
-        String surnameOfFelix = lautarosalina.getApelldio();
+        String surnameOfSalina = lautarosalina.getApelldio();
         String mailOfFelix = lautarosalina.getDireccionCorreo();
 
-        assertEquals("Felix", nameOfFelix);
-        assertEquals("Toledo", surnameOfFelix);
+        assertEquals("Felix", nameOfSalina);
+        assertEquals("Toledo", surnameOfSalina);
         assertEquals("felixtoledoctes@aquilita.com", mailOfFelix);
     }
 
