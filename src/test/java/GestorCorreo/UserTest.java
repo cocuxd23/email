@@ -58,7 +58,7 @@ public class UserTest {
 
     @Test
     public void user_functions_test(){
-        User user = new User("Felix", "Toledo", "felix@gmail.com");
+        User user = new User("Lautaro", "Salina", "lautaro@gmail.com");
         user.setNombre("Felixito");
         user.setApellido("Perez");
         user.setDireccionCorreo("felixperez@gmail.com");
