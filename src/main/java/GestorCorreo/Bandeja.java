@@ -6,8 +6,8 @@ public class Bandeja {
 
     private ArrayList<Mail> mails = new ArrayList<>();
 
-    public int tamano(){
-        return mails.size();
+    public int tamano(){  //Cuenta los espacios de memoria que tiene mails 
+        return mails.size();  //Y te devuelve un valor entero que va a ser un tamaño
     }
 
 
@@ -15,11 +15,11 @@ public class Bandeja {
         mails.add(mail);
     }
 
-    public Mail traer(int index){
-        return mails.get(index);
+    public Mail traer(int index){ //Getea el index y trae el primer mail
+        return mails.get(index);  //Vos decidis que mail queres que te traiga
     }
 
     public ArrayList<Mail> traerTodo(){
-        return mails;
+        return mails;  //Retorna todos los mails
     }
 }

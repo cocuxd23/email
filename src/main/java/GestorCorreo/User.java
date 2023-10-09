@@ -76,7 +76,7 @@ public class User {
     }
 
     public void anadirMailSalida(Mail mail){ //Usamos añadir porque no queres mostrar sino añadir una lista
-        salida.anadir(mail);
+        salida.anadir(mail); //Se añade el original
     }
 
     public void setDireccionCorreo(String direccionCorreo) {

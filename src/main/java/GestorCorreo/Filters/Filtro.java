@@ -2,7 +2,7 @@ package GestorCorreo.Filters;
 import java.util.ArrayList;
 import GestorCorreo.*;
 
-public class Filtro {
+public abstract class Filtro {
      private String nombre = "";
 
      protected ArrayList<Mail> buscarString(String paraBuscar, Bandeja Bandeja){
