@@ -14,9 +14,9 @@ public class UserTest {
         String surnameOfSalina = lautarosalina.getApelldio();
         String mailOfSalina = lautarosalina.getDireccionCorreo();
 
-        assertEquals("Felix", nameOfSalina);
-        assertEquals("Toledo", surnameOfSalina);
-        assertEquals("felixtoledoctes@aquilita.com", mailOfSalina);
+        assertEquals("Lautaro", nameOfSalina);
+        assertEquals("Salina", surnameOfSalina);
+        assertEquals("lautarosalina15@hyperex.com", mailOfSalina);
     }
 
     @Test
