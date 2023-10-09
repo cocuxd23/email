@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class UserTest {
     @Test
     public void create_new_user_with_name_surname_mailAdress(){
-        User felixtoledo = new User("Felix", "Toledo", "felixtoledoctes");
+        User felixtoledo = new User("Lautaro", "Salina", "lautarosalina15");
 
         String nameOfFelix = felixtoledo.getNombre();
         String surnameOfFelix = felixtoledo.getApelldio();
