@@ -26,10 +26,10 @@ public class UserTest {
         User lucassalina = aplicacion.crearUsuario("Lucas", "Salina", "lucassalina11");
         
         int cantidadDeUsuariosCreados = aplicacion.getListaUsuarios().size();
-        User usuarioFelix = aplicacion.getListaUsuarios().get(0);
+        User usuarioSalina = aplicacion.getListaUsuarios().get(0);
         
         assertEquals(2, cantidadDeUsuariosCreados);
-        assertEquals(felixtoledo, usuarioFelix);
+        assertEquals(lautarosalina, usuarioSalina);
     }
     /* 
     @Test
