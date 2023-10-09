@@ -10,7 +10,7 @@ public class UserTest {
     public void create_new_user_with_name_surname_mailAdress(){
         User lautarosalina = new User("Lautaro", "Salina", "lautarosalina15");
 
-        String nameOfFelix = lautarosalina.getNombre();
+        String nameOfSalina = lautarosalina.getNombre();
         String surnameOfFelix = lautarosalina.getApelldio();
         String mailOfFelix = lautarosalina.getDireccionCorreo();
 
