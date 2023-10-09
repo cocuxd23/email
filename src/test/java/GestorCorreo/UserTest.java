@@ -59,13 +59,13 @@ public class UserTest {
     @Test
     public void user_functions_test(){
         User user = new User("Lautaro", "Salina", "lautaro@gmail.com");
-        user.setNombre("Felixito");
-        user.setApellido("Perez");
-        user.setDireccionCorreo("felixperez@gmail.com");
+        user.setNombre("Lautarito");
+        user.setApellido("Campos");
+        user.setDireccionCorreo("lautaritocampos@gmail.com");
 
-        String hasToBeName = "Felixito";
-        String hasToBeSurname = "Perez";
-        String hasToBeMailAdress = "felixperez@gmail.com";
+        String hasToBeName = "Lautarito";
+        String hasToBeSurname = "Campos";
+        String hasToBeMailAdress = "lautaritocampos@gmail.com";
 
         assertEquals(hasToBeName, user.getNombre());
         assertEquals(hasToBeSurname, user.getApelldio());
