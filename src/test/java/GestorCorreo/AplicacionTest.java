@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class AplicacionTest {
     @Test
     public void check_instance_of_app() {
         MailManager aplicaion = new MailManager();
