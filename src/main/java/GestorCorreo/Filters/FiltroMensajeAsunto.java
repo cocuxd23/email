@@ -14,11 +14,11 @@ public class FiltroMensajeAsunto extends Filtro {
           FiltroAsunto asuntoFiltro = new FiltroAsunto();
           FiltroMensaje mensajeFiltro = new FiltroMensaje();
           
-          ArrayList<Mail> asuntos = asuntoFiltro.filtrar(asuntoBuscar, bandeja);
+          ArrayList<Mail> asuntos = asuntoFiltro.filtrar(asuntoBuscar, bandeja); //Son todos los asuntos que me coincidio con el asuntoBuscar
           ArrayList<Mail> mensajes = mensajeFiltro.filtrar(mensajeBuscar, bandeja);
 
-          ArrayList<Mail> resultado = new ArrayList<>(asuntos);
-          resultado.retainAll(mensajes);
+          ArrayList<Mail> resultado = new ArrayList<>(asuntos); //Guardo los asuntos en resultado
+          resultado.retainAll(mensajes); //Solamente quedan los asuntos que coinciden con mensaje
 
           return resultado;
      }
