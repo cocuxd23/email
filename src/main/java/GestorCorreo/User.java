@@ -7,17 +7,17 @@ import java.util.ArrayList;
 
 public class User {
 
-    private ArrayList<Contacto> listaContactos = new ArrayList<>();
+    private ArrayList<Contacto> listaContactos = new ArrayList<>(); //Array list para los contactos
 
-    private Bandeja entrada = new Bandeja();
-    private Bandeja salida = new Bandeja();
+    private Bandeja entrada = new Bandeja(); //Creamos la bandeja de entrada
+    private Bandeja salida = new Bandeja(); //Creamos la bandeja de salida
 
     private String nombre;
     private String apellido;
     private String direccionCorreo;
 
     public User(String nombre, String apellido, String direccionCorreo){
-        this.setNombre(nombre);
+        this.setNombre(nombre); //Asigan el set nombre el valor nombre 
         this.setApellido(apellido);
         this.setDireccionCorreo(direccionCorreo);
     }
@@ -31,13 +31,12 @@ public class User {
     public ArrayList<Contacto> getListaContactos(){ //Te muestra la lista de contactos
         return listaContactos;
     }
-    //Crea un un array de strings que se llama mails donde recorremos toda la lista y vamos añadiendo 
-    //Todas las direcciones de correos y las añadimos a nuestra lista de mails y retornamos mails
+    //Crea un un array de strings que se llama mails donde recorremos toda la lista de contactos
     public ArrayList<String> getTodosLosMailsDeContactos(){
         ArrayList<String> mails = new ArrayList<>();
 
-        for(Contacto contact : listaContactos){
-            mails.add(contact.getDireccionCorreo());
+        for(Contacto contact : listaContactos){ //Tomamos todos los contactos que estan en la lista, lo recorremos
+            mails.add(contact.getDireccionCorreo()); //Y a la lista de contactos se le añade la direccion de correo
         }
 
         return mails;
@@ -49,8 +48,8 @@ public class User {
 
         crearMensaje(aplicacion, asunto, mensaje, listPara);
     }
-    public void crearMensaje(MailManager aplicacion, String asunto, String mensaje, ArrayList<String> para) {
-        Mail mail = new Mail(asunto, mensaje, this.getDireccionCorreo(), para);
+    public void crearMensaje(MailManager aplicacion, String asunto, String mensaje, ArrayList<String> para) { 
+        Mail mail = new Mail(asunto, mensaje, this.getDireccionCorreo(), para); //Creo un nuevo email
         aplicacion.mandarMensaje(this, mail);
     }
 
@@ -70,8 +69,8 @@ public class User {
         ArrayList<Mail> finded = filterType.filtrar(searchTitle, searchOther, entrada);
         return finded;
     }
-
-    public void anadirMailEntrada(Mail mail){ //Añade un mail a la entrada, y no añade ese mismo mail, sino que lo clona, porque si no clona no se puede modificar
+    //Añade un mail a la entrada, pero añade un clon, porque si no clona la persona puede modificar el mail
+    public void anadirMailEntrada(Mail mail){ 
         Mail newMail = new Mail(mail.getAsunto(), mail.getMensaje(), mail.getRemitente(), mail.getPara());
         entrada.anadir(newMail);
     }
@@ -92,11 +91,11 @@ public class User {
         return direccionCorreo;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre) { //Tenemos la instancia nombre que va a ser un nuevo nombre
         this.nombre = nombre;
     }
 
-    public String getNombre() {
+    public String getNombre() { //Y con el get me retorna ese nombre
         return nombre;
     }
 

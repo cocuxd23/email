@@ -7,7 +7,7 @@ public class Mail {  //Creamos la clase mail
     private String asunto;
     private String mensaje;
     private String remitente;
-    private ArrayList<String> para = new ArrayList<>();  //Guarda una lista de String, que son los correos
+    private ArrayList<String> para = new ArrayList<>();  //Array list para guardar muchos emails
     
     //Crea la clase Mail, con los parametros:
     public Mail(String asunto, String mensaje,  String remitente, ArrayList<String> para){ 
@@ -16,6 +16,7 @@ public class Mail {  //Creamos la clase mail
         this.remitente = remitente;
         this.para = para;
     }
+    //Usamos encapsulamiento
     //Con el uso de get podemos acceder a las clases
     public String getAsunto() { //Con el get me devulve el nombre 
         return asunto; 

@@ -6,9 +6,6 @@ import java.util.stream.Collectors;
 public class MailManager {
     private ArrayList<User> listaUsuarios = new ArrayList<>();
     
-    public MailManager() {
-    }
-
     public void mandarMensaje(User remitente, Mail mail){
         ArrayList<String> direccionesDeMail = mail.getPara();
         List<User> usuariosEncontrados = encontrarUsuarioConMail(direccionesDeMail);
