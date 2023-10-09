@@ -87,4 +87,14 @@ public class FiltroTest {
           assertEquals("Filtro de Asunto", nombreFiltroAsunto);
 
      }
+     /* 
+     @Test
+     public void filter_null(){
+          FiltroRemitente filtroRemitente = new FiltroRemitente();
+          
+          lautaro.crearMensaje(app, "buenas", "amigo", "");
+          ArrayList<Mail> resultado = lautaro.filtrarEntrada("buenas", "amigo", filtroRemitente);
+          assertNull(null, resultado);
+          
+     }*/
 }
