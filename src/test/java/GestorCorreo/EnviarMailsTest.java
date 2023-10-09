@@ -13,12 +13,8 @@ public class EnviarMailsTest {
     User paulina = aplicacion.crearUsuario("Paulina", "Palmeyro", "pauliyro");
     User gonza = aplicacion.crearUsuario("Gonza", "Cabral", "gonza@gmail.com");
     ArrayList<String> para = new ArrayList<>();
-    para.add("pauliyro@aquilita.com");
+    para.add("pauliyro@hyperex.com");
     para.add("gonza@gmail.com");
-
-    //User lau = aplicacion.crearUsuario("Lautaro", "Vegano", "lauvega");
-    //User felix = aplicacion.crearUsuario("Felix", "Toledo", "felixt");
-   //User pedro = aplicacion.crearUsuario("Pedro", "Rosales", "pedro@gmail.com");
 
     ori.crearMensaje(aplicacion, "Juntada", "Buennos dias, estan para juntarse mañana?", para);
     assertEquals(1, ori.getSalida().tamano());
