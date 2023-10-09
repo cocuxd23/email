@@ -22,8 +22,8 @@ public class UserTest {
     @Test
     public void create_new_user_and_check_entry_to_userlist(){
         MailManager aplicacion = new MailManager();
-        User felixtoledo = aplicacion.crearUsuario("Felix", "Toledo", "felixtoledoctes");
-        User orifarela = aplicacion.crearUsuario("Oriana", "Farela", "orifarela");
+        User lautarosalina = aplicacion.crearUsuario("Lautaro", "Salina", "lautarosalina15");
+        User lucassalina = aplicacion.crearUsuario("Lucas", "Salina", "lucassalina11");
         
         int cantidadDeUsuariosCreados = aplicacion.getListaUsuarios().size();
         User usuarioFelix = aplicacion.getListaUsuarios().get(0);
