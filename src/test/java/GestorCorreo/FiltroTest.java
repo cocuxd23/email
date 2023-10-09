@@ -9,76 +9,71 @@ import java.util.ArrayList;
 
 public class FiltroTest {
      MailManager app = new MailManager();
-     User felix = app.crearUsuario("Lautaro", "Salina", "lautaroasalina15");
-     User rodrigo = app.crearUsuario("Bruno", "Pini", "bruno@gmail.com");
-     User grace = app.crearUsuario("Lucas", "Salina", "lucassalina11");
-
-     //User felix = app.crearUsuario("Felix", "Toledo", "felixtoledoctes");
-     //User rodrigo = app.crearUsuario("rodri", "Gonzalez", "rodrigo@gmail.com");
-     //User grace = app.crearUsuario("grace", "meza", "gracemeza10");
-     
+     User lautaro = app.crearUsuario("Lautaro", "Salina", "lautaroasalina15");
+     User bruno = app.crearUsuario("Bruno", "Pini", "bruno@gmail.com");
+     User lucas = app.crearUsuario("Lucas", "Salina", "lucassalina11");
 
      @Test
      public void filter_from_title(){
-          felix.anadirContacto("Gracielita", "Meza - TRABAJO", "gracemeza10@aquilita.com");
-          felix.anadirContacto("Rodri", "Mi hermano", "rodrigo@gmail.com");
+          lautaro.anadirContacto("Lucas", "Salina - CASA", "lucas10@hyperex.com");
+          lautaro.anadirContacto("Bruno", "Sale lol", "bruno@gmail.com");
 
-          felix.crearMensaje(app, "BuscoEste", "mensaje", felix.getTodosLosMailsDeContactos());
-          felix.crearMensaje(app, "Nobuskoezte", "mjito", "rodrigo@gmail.com");
-          felix.crearMensaje(app, "EsteSiBusco", "mensaje", "gracemeza10@aquilita.com");
+          lautaro.crearMensaje(app, "BancoEste", "pedilo", lautaro.getTodosLosMailsDeContactos());
+          lautaro.crearMensaje(app, "NoBancoEste", "pdlo", "bruno@gmail.com");
+          lautaro.crearMensaje(app, "EsteSiBanco", "pedilo", "lucas10@aquilita.com");
 
           FiltroAsunto filtro = new FiltroAsunto();
-          ArrayList<Mail> resultado = felix.filtrarSalida("Busco", filtro);
+          ArrayList<Mail> resultado = lautaro.filtrarSalida("Banco", filtro);
           assertEquals(2, resultado.size());
      }
 
      @Test
      public void filter_from_message(){
-          felix.crearMensaje(app, "mensaje a grace", "hola graciela", "gracemeza10@aquilita.com");
-          felix.crearMensaje(app, "mensaje a grace", "chau grace", "gracemeza10@aquilita.com");
+          lautaro.crearMensaje(app, "mensaje a lucas", "hola lucas", "lucas10@aquilita.com");
+          lautaro.crearMensaje(app, "mensaje a lucas", "chau lucas", "10@aquilita.com");
      
           FiltroMensaje filtro = new FiltroMensaje();
-          ArrayList<Mail> resultado = grace.filtrarEntrada("hola", filtro);
+          ArrayList<Mail> resultado = lucas.filtrarEntrada("hola", filtro);
           assertEquals(1, resultado.size());
      }
 
      @Test
      public void filter_from_from(){
-          felix.crearMensaje(app, "hola", "mjito", "rodrigo@gmail.com");
-          felix.crearMensaje(app, "chau", "mjito", "rodrigo@gmail.com");
-          grace.crearMensaje(app, "Nobuskoezte", "mjito", "rodrigo@gmail.com");
+          lautaro.crearMensaje(app, "Que onda", "Como estas", "bruno@gmail.com");
+          lautaro.crearMensaje(app, "Hola", "Nos juntamos", "bruno@gmail.com");
+          lucas.crearMensaje(app, "No banco este", "Mentira", "bruno@gmail.com");
 
           FiltroRemitente filtro = new FiltroRemitente();
-          ArrayList<Mail> resultado = rodrigo.filtrarEntrada("felixto", filtro);
+          ArrayList<Mail> resultado = bruno.filtrarEntrada("felixto", filtro);
           assertEquals(2, resultado.size());
      }
 
      @Test
      public void filter_from_title_and_from(){
-          felix.crearMensaje(app, "hola", "mjito", "rodrigo@gmail.com");
-          felix.crearMensaje(app, "hola mi hermano", "quiero que hablemos", "rodrigo@gmail.com");
-          felix.crearMensaje(app, "chau", "mjito", "rodrigo@gmail.com");
-          grace.crearMensaje(app, "hola", "mjito", "rodrigo@gmail.com");
+          lautaro.crearMensaje(app, "Coneau", "Les desacreditamos la carrera", "bruno@gmail.com");
+          lautaro.crearMensaje(app, "LOL", "jugamos una partida", "bruno@gmail.com");
+          lautaro.crearMensaje(app, "Soy", "Lau", "bruno@gmail.com");
+          lucas.crearMensaje(app, "No soy", "Lau", "rodrigo@gmail.com");
 
           FiltroRemitenteAsunto filtro = new FiltroRemitenteAsunto();
-          ArrayList<Mail> resultado = rodrigo.filtrarEntrada("hola", "felix", filtro);
+          ArrayList<Mail> resultado = bruno.filtrarEntrada("Hola", "salina", filtro);
           assertEquals(2, resultado.size());
      }
 
      @Test
      public void filter_from_title_and_message(){
-          felix.crearMensaje(app, "hola", "mi hermano", "rodrigo@gmail.com");
-          felix.crearMensaje(app, "este no", "mi hermano", "rodrigo@gmail.com");
-          felix.crearMensaje(app, "chau", "este no busco", "rodrigo@gmail.com");
-          grace.crearMensaje(app, "hola", "hermano, como estas?", "rodrigo@gmail.com");
+          lautaro.crearMensaje(app, "Sale", "chambear", "bruno@gmail.com");
+          lautaro.crearMensaje(app, "Nos vemos", "mañana", "bruno@gmail.com");
+          lautaro.crearMensaje(app, "Si", "quiero", "bruno@gmail.com");
+          lucas.crearMensaje(app, "No", "nos juntamos mañana?", "bruno@gmail.com");
 
           FiltroMensajeAsunto filtro = new FiltroMensajeAsunto();
-          ArrayList<Mail> resultado = rodrigo.filtrarEntrada("hola", "hermano", filtro);
+          ArrayList<Mail> resultado = bruno.filtrarEntrada("hola", "amigo", filtro);
           assertEquals(2, resultado.size());
      }
 
      @Test
-     public void name_of_filters(){
+     public void nombreFiltro(){
           FiltroRemitente filtroRemitente = new FiltroRemitente();
           FiltroMensaje filtroMensaje = new FiltroMensaje();
           FiltroAsunto filtroAsunto = new FiltroAsunto();
