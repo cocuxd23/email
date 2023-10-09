@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 
-public class SendMailsTest {
+public class EnviarMailsTest {
 @Test
     public void create_app_create_user_send_mail(){
     MailManager aplicacion = new MailManager();
